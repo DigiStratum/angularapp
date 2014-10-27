@@ -1,0 +1,43 @@
+{
+  "name": "angular-app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Angular App Skeleton - AngularJS",
+  "repository": "",
+  "license": "TBD",
+  "devDependencies": {
+    "bower": "^1.3.1",
+    "grunt-angular-gettext": "^0.2.15",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.12.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.9.0",
+    "http-server": "^0.6.1",
+    "jshint-stylish": "^0.2.0",
+    "grunt-karma": "^0.8.3",
+    "karma": "^0.12.21",
+    "karma-coverage": "^0.2.6",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-ng-html2js-preprocessor": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "protractor": "^1.1.1",
+    "shelljs": "^0.2.6"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  }
+}

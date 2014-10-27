@@ -1,0 +1,130 @@
+#appmenu {
+	position: absolute;
+	right: 5%;
+	top: 10px;
+}
+
+/*Strip the ul of padding and list styling*/
+#appmenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*Create a horizontal list with spacing*/
+#appmenu li {
+	display: inline-block;
+	float: left;
+	margin-right: 5px;
+}
+
+
+#appmenulang {
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	border-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	padding: 2px;
+}
+
+/*Style for menu links*/
+#appmenu li a {
+	display: block;
+	min-width:140px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+/*Hover state for top level links*/
+#appmenu li:hover a {
+	background: rgba(25, 197, 137, 0.4);
+	border-radius: 10px;
+}
+
+/*Style for dropdown links*/
+#appmenu li:hover ul a {
+	color: #333;
+	height: 30px;
+	line-height: 30px;
+	background: none;
+	/*border-radius: 0px;*/
+}
+
+/*Hover state for dropdown links*/
+#appmenu li:hover ul a:hover {
+	/*background: rgba(25, 197, 137, 0.4);*/
+	color: #339966;
+}
+
+/*Hide dropdown links until they are needed*/
+#appmenu li ul {
+	display: none;
+	background: rgba(225, 225, 225, 0.7);
+	border-radius: 10px;
+}
+
+/*Make dropdown links vertical*/
+#appmenu li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+#appmenu li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+#appmenu ul li:hover a + .appmenuhidden, .appmenuhidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+#appmenu .show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	text-align: right;
+	display: none;
+}
+
+/*Hide checkbox*/
+#appmenu input[type=checkbox]{
+	display: none;
+	-webkit-appearance: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+#appmenu input[type=checkbox]:checked ~ .menutop {
+	display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+	/*Make dropdown links appear inline*/
+	#appmenu ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	#appmenu li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	#appmenu ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	#appmenu .show-menu {
+		display: block;
+	}
+}
+
