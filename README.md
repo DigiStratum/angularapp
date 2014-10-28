@@ -1,4 +1,4 @@
-# Angular-App Skeleton
+# AngularApp Skeleton
 
 ## REQUIREMENTS
 
@@ -7,8 +7,10 @@ working as of this writing: http://nodejs.org/
 
 Install nodejs and npm normally, then install bower with npm:
 
+```
 npm install -g bower
 npm install -g grunt-cli
+```
 
 
 ## BUILD
@@ -36,10 +38,4 @@ Other useful operations include:
   * `grunt dist` - make build and dist versions without testing
   * `grunt watch` - watch for changes in source/test files and re-run tests when they do
   * `grunt translate` - get translation strings from source files (po/extracted.pot) and compile *.po
-
-
-## REFERENCES
-* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists
-* http://scotch.io/tutorials/javascript/angularjs-best-practices-directory-structure
-* angular minification (http://scotch.io/tutorials/javascript/declaring-angularjs-modules-for-minification)
 
