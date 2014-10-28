@@ -5,11 +5,6 @@
  * ref: http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/
  */
 
-$baseUri = "";
-$appUri = "{$baseUri}/app";
-$cssUri = "{$baseUri}/assets/css";
-$jsUri = "{$baseUri}/assets/js";
-
 $appConfig = array(
 	'lang' => 'en'
 );
@@ -95,17 +90,17 @@ function escapeJSString($str, $delim="'") {
 		</script>
 		<!-- End Google Analytics -->
 
-		<link rel="stylesheet" href="<?=$baseUri?>/bower_components/html5-boilerplate/css/normalize.css"/>
-		<link rel="stylesheet" href="<?=$baseUri?>/bower_components/html5-boilerplate/css/main.css"/>
-		<link rel="stylesheet" href="<?=$cssUri?>/app.css"/>
-		<link rel="stylesheet" href="<?=$cssUri?>/menu.css"/>
+		<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css"/>
+		<link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/app.css"/>
+		<link rel="stylesheet" href="assets/css/menu.css"/>
 
-		<script src="<?=$baseUri?>/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+		<script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
 		<div id="appheader">
 			<div class="layoutbar">
-				<ng-include src="'<?=$appUri?>/components/header/header.html'"></ng-include>
+				<ng-include src="'app/components/header/header.html'"></ng-include>
 			</div>
 		</div>
 
@@ -122,17 +117,17 @@ function escapeJSString($str, $delim="'") {
 
 		<div id="appfooter">
 			<div class="layoutbar">
-				<ng-include src="'<?=$appUri?>/components/footer/footer.html'"></ng-include>
+				<ng-include src="'app/components/footer/footer.html'"></ng-include>
 			</div>
 		</div>
 
 		<!-- In production use:
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 		-->
-		<script src="<?=$baseUri?>/bower_components/angular/angular.js"></script>
-		<script src="<?=$baseUri?>/bower_components/angular-route/angular-route.js"></script>
-		<script src="<?=$baseUri?>/bower_components/angular-gettext/dist/angular-gettext.min.js"></script>
-		<script src="<?=$jsUri?>/angular-app.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/angular-gettext/dist/angular-gettext.min.js"></script>
+		<script src="assets/js/angular-app.js"></script>
 	</body>
 </html>
 
