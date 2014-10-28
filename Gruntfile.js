@@ -126,7 +126,7 @@ module.exports = function(grunt) {
 					{ src: ['assets/img/*'], dest: 'build/assets/img/', cwd: 'src', flatten: true, expand: true },
 					{ src: ['index.php'], dest: 'build/', cwd: 'src', flatten: true, expand: true },
 					{ src: ['config.js'], dest: 'build/', cwd: 'src', flatten: true, expand: true },
-					{ src: ['**/*'], dest: 'build/bower_components', cwd: 'src/bower_components', flatten: false, expand: true },
+					{ src: ['**/*'], dest: 'build/bower_components', cwd: 'bower_components', flatten: false, expand: true },
 					{ src: ['**/*.html'], dest: 'build/app/components', cwd: 'src/app/components', flatten: false, expand: true },
 					{ src: ['**/*.html'], dest: 'build/app/shared', cwd: 'src/app/shared', flatten: false, expand: true }
 				]

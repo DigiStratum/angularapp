@@ -2,12 +2,13 @@
 
 ## REQUIREMENTS
 
-You will need nodejs, npm, and bower installed to build this project. Version 0.10.32 is working as
-of this writing: http://nodejs.org/
+You will need nodejs, npm, bower, and grunt installed to build this project. Version 0.10.32 is
+working as of this writing: http://nodejs.org/
 
 Install nodejs and npm normally, then install bower with npm:
 
 npm install -g bower
+npm install -g grunt-cli
 
 
 ## BUILD
