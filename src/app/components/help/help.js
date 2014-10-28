@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('myApp.help', ['ngRoute'])
+angular.module('angularApp.help', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/help', {
     templateUrl: 'app/components/help/help.html',

@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('myApp.home', ['ngRoute'])
+angular.module('angularApp.home', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
     templateUrl: 'app/components/home/home.html',
