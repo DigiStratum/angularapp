@@ -1,0 +1,7 @@
+bower_components/*
+node_modules/*
+po/extracted.pot
+src/assets/js/generated/*
+src/config.js
+test/results/*
+
