@@ -2,7 +2,7 @@
 
 This is a "walking skeleton", so to speak, web application based on AngularJS
 (https://angularjs.org) and an ecosystem of nodejs (http://nodejs.org) tools that are commonly
-used to manage, build, and deploy AnrgularJS applications. The idea here is to same time when
+used to manage, build, and deploy AnrgularJS applications. The idea here is to save time when
 ramping up new projects by providing a comprehensive solution for all the foundational stuff
 that can otherwise take hours, or days of valuable development time, particularly when this is
 all new to you.
@@ -11,8 +11,8 @@ Once you have everything installed under the REQUIREMENTS section below, you wil
 BUILD a working version of the application into the build directory. The build directory is
 intended to be suitable for hosting up directly whether through your IDE (IntelliJ can do this,
 for example), a nodejs/grunt launched host, or some other HTTP server such as Apache already
-running in your environment: simply link make the contents of the build directory available
-through your HTTP server solution, and you are off to the races.
+running in your environment: simply make the contents of the build directory available through
+your HTTP server solution, and you are off to the races.
 
 To launch the AngularApp, simply direct your browser to http://yourhostname/builddir/index.html
 
