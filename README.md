@@ -1,8 +1,16 @@
 # Angular-App Skeleton
 
-## BUILD
+## REQUIREMENTS
 
-You will need nodejs installed to build this project. Version 0.10.32 is working as of this writing.
+You will need nodejs, npm, and bower installed to build this project. Version 0.10.32 is working as
+of this writing: http://nodejs.org/
+
+Install nodejs and npm normally, then install bower with npm:
+
+npm install -g bower
+
+
+## BUILD
 
 If this is your first time, you will need to copy the file src/config.example.js to src/config.js
 and edit the properties appropriately for the environment to which you are deploying. THEN... 
