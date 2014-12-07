@@ -7,7 +7,7 @@ ramping up new projects by providing a comprehensive solution for all the founda
 that can otherwise take hours, or days of valuable development time, particularly when this is
 all new to you.
 
-Once you have everything installed under the REQUIREMENTS section below, you will be able to
+Once you have everything installed under the PREREQUISITES section below, you will be able to
 BUILD a working version of the application into the build directory. The build directory is
 intended to be suitable for hosting up directly whether through your IDE (IntelliJ can do this,
 for example), a nodejs/grunt launched host, or some other HTTP server such as Apache already
@@ -47,10 +47,12 @@ including a junit-compatible test result XML file that can be parsed by a contin
 server.
 
 Other useful operations include:
+  * `grunt bower` - just get/update the bower dependencies
   * `grunt clean` - clean the build result directories out
   * `grunt test` - just run the tests without building
   * `grunt build` - just build without testing or making a dist version
   * `grunt dist` - make build and dist versions without testing
+  * `grunt quick` - similar to build target, but skips testing and dist build (more quicker!)
   * `grunt watch` - watch for changes in source/test files and re-run tests when they do
   * `grunt translate` - get translation strings from source files (po/extracted.pot) and compile *.po
 
