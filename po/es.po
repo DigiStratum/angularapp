@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: AngularApp\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Kelly Diversified <info@kellydiversified.com>\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es\n"
+
+#: src/app/components/header/header.html
+msgid "AngularApp!"
+msgstr ""
+
+#: src/app/components/home/home.html
+msgid "This is the home page"
+msgstr "Esta es la página de inicio"
+
+#: src/app/components/home/home.html
+msgid "Welcome to AngularApp!"
+msgstr "Bienvenido a AngularApp!"
