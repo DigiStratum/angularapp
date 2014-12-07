@@ -18,18 +18,19 @@ module.exports = function(config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'bower_components/angular/angular.js',
-			'bower_components/angular-mocks/angular-mocks.js',
-			'bower_components/angular-resource/angular-resource.js',
-			'bower_components/angular-route/angular-route.js',
-			'bower_components/js-base64/base64.js',
-			'bower_components/sinon/lib/sinon.js',
-			'bower_components/sinon/lib/sinon/assert.js',
-			'bower_components/sinon/lib/sinon/behavior.js',
-			'bower_components/sinon/lib/sinon/call.js',
-			'bower_components/sinon/lib/sinon/spy.js',
-			'bower_components/sinon/lib/sinon/stub.js',
-			'bower_components/sinon/lib/sinon/util/fake_timers.js',
+			'src/bower_components/angular/angular.js',
+			'src/bower_components/angular-mocks/angular-mocks.js',
+			'src/bower_components/angular-resource/angular-resource.js',
+			'src/bower_components/angular-route/angular-route.js',
+			'src/bower_components/angular-ui-router/release/angular-ui-router.js',
+			'src/bower_components/js-base64/base64.js',
+			'src/bower_components/sinon/lib/sinon.js',
+			'src/bower_components/sinon/lib/sinon/assert.js',
+			'src/bower_components/sinon/lib/sinon/behavior.js',
+			'src/bower_components/sinon/lib/sinon/call.js',
+			'src/bower_components/sinon/lib/sinon/spy.js',
+			'src/bower_components/sinon/lib/sinon/stub.js',
+			'src/bower_components/sinon/lib/sinon/util/fake_timers.js',
 			'src/app/**/*.js'
 		],
 		

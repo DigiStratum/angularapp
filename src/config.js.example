@@ -1,7 +1,6 @@
-/*
-App configuration is defined as javascript variables below.
-NOTE: This file should be renamed to remove the ".example" extension when deployed
- */
+/*jshint unused: false*/
+
 var appConfig = {
 	googleAnalyticsSiteId: ''
 };
+

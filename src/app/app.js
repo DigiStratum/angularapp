@@ -1,25 +1,29 @@
-(function() {
-
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('angularApp', [
+angular.module('AngularApp', [
 	'ngRoute',
-	'angularApp.about',
-	'angularApp.help',
-	'angularApp.home',
-	'angularApp.login',
-	'angularApp.register',
-	'angularApp.version',
-	'gettext'
-]).
-config(['$routeProvider', function($routeProvider) {
-	$routeProvider.otherwise({redirectTo: '/home'});
-}]);
+	'ngMessages',
+	'ui.router',
+	'gettext',
+	'home',
+	'header'
+])
 
-angular.module('angularApp').run(function (gettextCatalog) {
-	//console.log('Setting language to: ' + appConfig.lang);
-	gettextCatalog.setCurrentLanguage(appConfig.lang);
-});
+.config(['$routeProvider', '$httpProvider',
+	function ($routeProvider, $httpProvider) {
+		$routeProvider.otherwise({redirectTo: '/home'});
 
-})();
+		// Magic follows: suppress authentication popups in Chrome
+		// and the likes by clarifying that requests are AJAXy...
+		$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+	}
+])
+
+.run(['gettextCatalog',
+	function (gettextCatalog) {
+
+		// Apply translations
+		gettextCatalog.setCurrentLanguage(appConfig.lang);
+	}
+]);
+

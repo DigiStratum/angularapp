@@ -1,0 +1,65 @@
+
+$colorRed: #F00;
+$colorOrange: #F60;
+$colorYellow: #FF0;
+$colorGreen: #0C0;
+$colorBlue: #036;
+
+
+$colorWhite: #FFF;
+$colorBrightSilver: #EEE;
+$colorDarkSilver: #DDD;
+$colorDarkGray: #666;
+$colorBlack: #000;
+
+
+$roundTiny: 5px;
+$roundSmall: 10px;
+$roundMedium: 15px;
+$roundLarge: 25px;
+
+
+.floater {
+	float: left;
+}
+
+.aLeft {
+	text-align: left;
+}
+
+.aRight {
+	text-align: right;
+}
+
+.aCenter {
+	text-align: center;
+}
+
+@mixin container($back: $colorBrightSilver, $fore: $colorDarkGray, $edge: $colorDarkSilver, $radius: $roundTiny) {
+	color: $fore;
+	background-color: $back;
+	border: 1px solid $edge;
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+.messageBox {
+	@include container;
+	padding: 5px 15px;
+	margin: 5px 50px;
+	.error {
+		color: $colorRed;
+	}
+	.warning {
+		color: $colorOrange;
+	}
+	.ok {
+		color: $colorGreen;
+	}
+	.notice {
+		color: $colorBlue;
+	}
+}
+

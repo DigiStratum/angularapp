@@ -1,34 +1,14 @@
-<span translate>AngularApp</span>
-
-<div id="appmenu">
-	<label for="show-menu" class="show-menu" translate>Menu</label>
-	<input type="checkbox" id="show-menu" role="button"/>
-	<ul class="menutop">
-		<li><a href="#" translate>Home</a></li>
-		<li>
-			<a href="#/account" translate>Account</a>
-			<ul class="appmenuhidden">
-				<li><a href="#/login" translate>Log in</a></li>
-				<li><a href="#/register" translate>Register</a></li>
-			</ul>
-		</li>
-		<li>
-			<a>Help</a>
-			<ul class="appmenuhidden">
-				<li><a href="#/help" translate>AngularApp Help</a></li>
-				<li><a href="#/about" translate>About</a></li>
-			</ul>
-		</li>
-		<li>
-			<form method="POST">
-				<input type="hidden" name="formAction" value="doLanguageChange"/>
-				<select id="appmenulang" name="lang" onchange="this.form.submit();">
-					<option value="--">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|||</option>
-					<option value="en">English</option>
-					<option value="fr">Fran&ccedil;ais</option>
-					<option value="es">Espa&ntilde;ol</option>
-				</select>
-			</form>
-		</li>
-	</ul>
+<div class="small-2 columns smBranding" translate>AngularApp!</div>
+<div class="small-8 columns smNavigation">
+	Useful Info.
 </div>
+<div class="small-2 columns smTranslation aRight">
+	<select id="appmenulang" name="lang" onchange="msSetLanguage(this.value);" style="width: 75px; text-align: center;">
+		<option>|||</option>
+		<!-- Don't translate these; each language is named in its own tongue to be readable by those speakers: -->
+		<option value="en">English</option>
+		<option value="fr">Fran&ccedil;ais</option>
+		<option value="es">Espa&ntilde;ol</option>
+	</select>
+</div>
+

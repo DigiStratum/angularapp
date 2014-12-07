@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="description" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<link rel="stylesheet" href="assets/css/app.css"/>
+
+		<script src="config.js"></script>
+
+		<!-- Google Analytics -->
+		<script async src='//www.google-analytics.com/analytics.js'></script>
+		<script>
+			// Conditionally enable GA if we have a siteID defined in the appConfig
+			if (appConfig.googleAnalyticsSiteId.length && (appConfig.googleAnalyticsSiteId.length > 0)) {
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', appConfig.googleAnalyticsSiteId, 'auto');
+				ga('send', 'pageview');
+			}
+		</script>
+		<!-- End Google Analytics -->
+	</head>
+	<body>
+
+		<!-- header -->
+		<div class="row header">
+			<icra-header><!-- app/components/header/header.js takes over here --></icra-header>
+		</div>
+
+		<!-- body -->
+		<div class="row">
+			<div class="small-1 columns">&nbsp;</div>
+			<div class="small-10 columns">
+				<!--[if lt IE 7]>
+				<p class="browsehappy">
+					You are using an <strong>outdated</strong> browser.
+					Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+				</p>
+				<![endif]-->
+
+				<div ng-view></div>
+			</div>
+			<div class="small-1 columns">&nbsp;</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<div class="small-2 large-3 columns">&nbsp;</div>
+			<div class="small-8 large-6 columns">
+				<ng-include src="'app/components/footer/footer.html'"></ng-include>
+			</div>
+			<div class="small-2 large-3 columns">&nbsp;</div>
+		</div>
+
+                <!-- build:js assets/js/vendor.js -->
+                <script src="bower_components/jquery/dist/jquery.js"></script>
+                <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+                <script src="bower_components/modernizr/modernizr.js"></script>
+                <script src="bower_components/angular/angular.js"></script>
+                <script src="bower_components/angular-route/angular-route.js"></script>
+                <script src="bower_components/angular-resource/angular-resource.js"></script>
+                <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+                <script src="bower_components/angular-messages/angular-messages.js"></script>
+                <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+                <script src="bower_components/js-base64/base64.js"></script>
+                <script src="bower_components/foundation/js/foundation.js"></script>
+                <!-- endbuild -->
+
+                <!-- build:js assets/js/app.js -->
+                <script src="assets/js/lang.js"></script>
+                <script src="app/app.js"></script>
+                <script src="app/components/home/home.js"></script>
+                <script src="app/components/header/header.js"></script>
+                <!-- endbuild -->
+
+		<script type="text/javascript">
+			(function() {
+				// All other dynamic script load operations go here BEFORE smBootstrap()ing
+				if (lang != 'en') {
+
+					// Load up a non-English language file for translations!
+					$.getScript('assets/js/translations/' + appConfig['lang'] + '.js', function () {
+						//console.log('Successfully loaded language script!');
+						bootstrap();
+					});
+				}
+				else {
+					bootstrap();
+				}
+
+				function bootstrap() {
+
+					// Manually bootstrapping angular is the LAST thing to be done!
+					angular.element('document').ready(function () {
+
+						// Bootstrap Angular to get out content rendered
+						angular.bootstrap(document, ['AngularApp']);
+
+						// Now make it pretty with Foundation
+						$(document).foundation();
+					});
+				}
+			})();
+		</script>
+	</body>
+</html>
+

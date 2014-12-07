@@ -16,19 +16,18 @@ your HTTP server solution, and you are off to the races.
 
 To launch the AngularApp, simply direct your browser to http://yourhostname/builddir/index.html
 
+## PREREQUISITES
 
-## REQUIREMENTS
-
-You will need nodejs, npm, bower, and grunt installed to build this project. Version 0.10.32 is
-working as of this writing: http://nodejs.org/
-
-Install nodejs and npm normally, then install bower and grunt command line with npm like so:
+1) Install nodejs (0.10.32 is working as of this writing)
+2) Install npm
+3) Install ruby (2.0.0 is working as of this writing)
+4) npm install -g grunt grunt-cli
 
 ```
-npm install -g bower
-npm install -g grunt-cli
+gem install foundation
+gem install compass
+gem install sass
 ```
-
 
 ## BUILD
 
