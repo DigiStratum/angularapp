@@ -1127,7 +1127,7 @@ $topbar-bg-color: #333;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 45px;
+$topbar-height: rem-calc(45);
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1139,7 +1139,7 @@ $topbar-dropdown-bg: #333;
 $topbar-dropdown-link-color: #fff;
 $topbar-dropdown-link-bg: #333;
 $topbar-dropdown-link-weight: normal;
-$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-size: rem-calc(5);
 $topbar-dropdown-toggle-color: #fff;
 $topbar-dropdown-toggle-alpha: 0.4;
 
