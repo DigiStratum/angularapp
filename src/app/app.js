@@ -6,7 +6,11 @@ angular.module('AngularApp', [
 	'ui.router',
 	'gettext',
 	'home',
-	'header'
+	'header',
+	'modal',
+	'Session',
+	'RestApi',
+	'TreadstoneV1Api'
 ])
 
 .config(['$routeProvider', '$httpProvider',

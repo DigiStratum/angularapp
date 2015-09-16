@@ -2,7 +2,7 @@
 
 angular.module('header', [ ])
 
-.directive('icraHeader', [
+.directive('header', [
 	function () {
 		return {
 			restrict: 'E',
