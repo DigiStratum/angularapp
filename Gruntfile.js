@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 			// define the files to lint
 			files: [
 				'Gruntfile.js',
-				'src/config.js',
+				'src/config.js.example',
 				'src/app/**/*.js',
 				'src/app/**/*test.js'
 			],
@@ -101,7 +101,6 @@ module.exports = function(grunt) {
 			},
 			build: {
 				src: [
-					'build/config.js',
 					'build/assets/js/*.js',
 					'!build/assets/js/translations/*.js'
 				]
@@ -173,7 +172,7 @@ module.exports = function(grunt) {
 			},
 			// Everything under build/
 			build: {
-				src: [ 'build/*', '!.gitignore' ]
+				src: [ 'build/*', '!build/config.js' ]
 			},
 			// Everything needing cleanup after the build runs
 			postbuild: {
