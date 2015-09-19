@@ -4,13 +4,14 @@ angular.module('AngularApp', [
 	'ngRoute',
 	'ngMessages',
 	'ui.router',
+	'RouteData',
 	'gettext',
 	'home',
 	'header',
-	'modal',
+	'Modal',
 	'Session',
 	'RestApi',
-	'TreadstoneV1Api'
+	'sampleV1Api'
 ])
 
 .config(['$routeProvider', '$httpProvider',

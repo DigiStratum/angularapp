@@ -1,0 +1,11 @@
+<div id="generalModal" class="reveal-modal" data-reveal aria-labelledby="generalModalTitle" aria-hidden="true" role="dialog">
+	<h1 id="generalModalTitle" class="{{model.data.type}}">
+		<span ng-if="model.data.type == 'error'" translate>An Error Has Occurred</span>
+		<span ng-if="model.data.type == 'notice'" translate>Information</span>
+		<span ng-if="model.data.type == 'warning'" translate>Warning</span>
+		<span ng-if="model.data.type == 'success'" translate>Success</span>
+	</h1>
+	<div id="generalModalBody" class="{{model.data.type}}">{{model.data.message}}</div>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+

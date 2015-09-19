@@ -1,6 +1,15 @@
 /*jshint unused: false*/
 
 var appConfig = {
-	googleAnalyticsSiteId: ''
+	googleAnalyticsSiteId: '',
+
+        // API access points
+        apiAccess: {
+
+                // Sample API 1
+                sampleV1api: {
+                        url: 'http://www.yourcorp.com/api/1'
+                },
+	}
 };
 
