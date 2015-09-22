@@ -2,7 +2,7 @@
 
 describe('Modal module', function() {
 
-	beforeEach(module('modal'));
+	beforeEach(module('Modal'));
 
 	describe('Modal controller', function(){
 		it('should ....', inject(function($controller) {

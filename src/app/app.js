@@ -6,12 +6,13 @@ angular.module('AngularApp', [
 	'ui.router',
 	'RouteData',
 	'gettext',
-	'home',
-	'header',
+	'Config',
 	'Modal',
 	'Session',
 	'RestApi',
-	'sampleV1Api'
+	'SampleV1Api',
+	'home',
+	'header'
 ])
 
 .config(['$routeProvider', '$httpProvider',
@@ -24,11 +25,17 @@ angular.module('AngularApp', [
 	}
 ])
 
-.run(['gettextCatalog',
-	function (gettextCatalog) {
+.run(['gettextCatalog', 'Config',
+	function (gettextCatalog, Config) {
 
 		// Apply translations
 		gettextCatalog.setCurrentLanguage(appConfig.lang);
+
+		// Pull in global scope configuration data
+		Config.add(appConfig);
+		Config.set('env.isIE', (navigator.appVersion.indexOf('MSIE') !== -1));
+		Config.set('env.isSafari', (navigator.appVersion.indexOf('Safari') !== -1));
+		Config.set('env.isFirefox', (navigator.userAgent.indexOf('Firefox') !== -1));
 	}
 ]);
 

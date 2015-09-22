@@ -68,18 +68,21 @@ angular.module('RestApi', [ 'ngResource' ])
 					var res = error;
 					switch (error.status) {
 
-						// FF gives 0 as the status code for AJAX operations that can't complete... other browsers too?
+						// FF gives 0 as the status code for AJAX operations
+						// that can't complete... other browsers too?
 						case 0:
 							ModalContent.showError('Lost communication with the server. Please try again.');
 							break;
 
-						// Unauthorized (session timed out, or user hit an authenticated page before logging in)
+						// Unauthorized (session timed out, or user hit
+						// an authenticated page before logging in)
 						case 401:
 
 							// Delete the access token
 							Session.del('accessToken');
 
-							// Signal authentication change for top-bar header to switch to anonymous mode...
+							// Signal authentication change for top-bar
+							// header to switch to anonymous mode...
 							$rootScope.$broadcast('authenticationChange', false);
 
 							// Redirect back to the login

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('modal', [ 'ngRoute' ])
+angular.module('Modal', [ 'ngRoute' ])
 
 /**
  * Modal content interface

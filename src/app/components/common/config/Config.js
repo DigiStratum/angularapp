@@ -68,7 +68,7 @@ angular.module('Config', [ ])
 			 */
 			add: function (obj, base) {
 				// Base is either empty or trails with a '.' to take next node
-				base = (arguments.length == 1) ? '' : base + '.';
+				base = (arguments.length === 1) ? '' : base + '.';
 
 				for (var prop in obj) {
 					if (typeof obj[prop] === 'function') {
