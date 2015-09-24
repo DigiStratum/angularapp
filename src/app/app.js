@@ -9,6 +9,7 @@ angular.module('AngularApp', [
 	'Config',
 	'Modal',
 	'Session',
+	'Authentication',
 	'RestApi',
 	'SampleV1Api',
 	'home',
@@ -28,14 +29,14 @@ angular.module('AngularApp', [
 .run(['gettextCatalog', 'Config',
 	function (gettextCatalog, Config) {
 
-		// Apply translations
-		gettextCatalog.setCurrentLanguage(appConfig.lang);
-
 		// Pull in global scope configuration data
 		Config.add(appConfig);
 		Config.set('env.isIE', (navigator.appVersion.indexOf('MSIE') !== -1));
 		Config.set('env.isSafari', (navigator.appVersion.indexOf('Safari') !== -1));
 		Config.set('env.isFirefox', (navigator.userAgent.indexOf('Firefox') !== -1));
+
+		// Apply translations
+		gettextCatalog.setCurrentLanguage(Config.get('lang'));
 	}
 ]);
 

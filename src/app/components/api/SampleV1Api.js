@@ -17,14 +17,14 @@ angular.module('SampleV1Api', [ 'ngResource' ])
 			},
 
 			// A sample API GET operation with a completion function
-			sampleGet: function (completionFunction) {
+			sampleGet: function (data, completionFunction) {
 				return restRequest(
 
 					// Endpoint resource & method
 					resourceSample().get,
 
 					// Request Parameters
-					null,
+					data,
 
 					completionFunction
 				);

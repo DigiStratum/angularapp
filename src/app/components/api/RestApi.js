@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('RestApi', [ 'ngResource' ])
+angular.module('RestApi', [ ])
 
 /**
  * Further wrap AJAX reposnses with a standard result structure which captures response headers
@@ -46,8 +46,8 @@ angular.module('RestApi', [ 'ngResource' ])
 /**
  * Wrap deferred AJAX operations with custom completionFunction
  */
-.factory('promiseWrapper', [ '$q', 'ModalContent', '$location', 'Session', '$rootScope',
-	function ($q, ModalContent, $location, Session, $rootScope) {
+.factory('promiseWrapper', [ '$q', '$location', 'Authentication', 'Moal',
+	function ($q, $location, Authentication, Moal) {
 		return function (promise, completionFunction) {
 			var deferred = $q.defer();
 			promise.then(
@@ -71,25 +71,21 @@ angular.module('RestApi', [ 'ngResource' ])
 						// FF gives 0 as the status code for AJAX operations
 						// that can't complete... other browsers too?
 						case 0:
-							ModalContent.showError('Lost communication with the server. Please try again.');
+							Moal.showError('Lost communication with the server. Please try again.');
 							break;
 
 						// Unauthorized (session timed out, or user hit
 						// an authenticated page before logging in)
 						case 401:
 
-							// Delete the access token
-							Session.del('accessToken');
-
-							// Signal authentication change for top-bar
-							// header to switch to anonymous mode...
-							$rootScope.$broadcast('authenticationChange', false);
+							// Kill the session authentication
+							Authentication.unauthenticate();
 
 							// Redirect back to the login
 							$location.path('/home');
 
 							// What just happened?
-							ModalContent.showWarning('Your session has timed out. Please sign in again.');
+							Moal.showWarning('Your session has timed out. Please sign in again.');
 							break;
 
 						// Any other error code we'll let the completion function execute

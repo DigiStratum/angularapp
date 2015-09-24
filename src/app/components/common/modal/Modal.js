@@ -59,7 +59,8 @@ angular.module('Modal', [ 'ngRoute' ])
                         message: 'default message'
                 };
 
-		// Note: String translation for the message happens in the HTML template, so arbitrary message text being passed in is not good...
+		// Note: String translation for the message happens in the HTML template,
+		// so arbitrary message text being passed in is not good...
 		function doShowMessage(type, message) {
 			data.type = type;
 			data.message = message;
