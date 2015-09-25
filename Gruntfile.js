@@ -374,6 +374,12 @@ module.exports = function(grunt) {
 		'filerev',		// disable if you want filename.js instead of filename.2354876.js for *.js
 		'usemin'
 	]);
+	grunt.registerTask('douseminquick', [
+		'useminPrepare',
+		'fixusemin',
+		'concat:generated',
+		'usemin'
+	]);
 
 	// Clean up build tree before building
 	grunt.registerTask('buildclean', [
@@ -414,9 +420,11 @@ module.exports = function(grunt) {
 
 	// QUICK
 	grunt.registerTask('quick', [
-		'buildclean',
-		'bower:dist',
-		'build'
+		'translate',
+		'copy:build',
+		'dosass',
+		'douseminquick',
+		'inline_angular_templates'
 	]);
 
 	// DIST
