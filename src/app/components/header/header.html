@@ -1,14 +1,31 @@
-<div class="small-2 columns smBranding" translate>AngularApp!</div>
-<div class="small-8 columns smNavigation" translate>
-	Welcome to the sample Application
-</div>
-<div class="small-2 columns smTranslation aRight">
-	<select id="appmenulang" name="lang" onchange="msSetLanguage(this.value);" style="width: 75px; text-align: center;">
-		<option>|||</option>
-		<!-- Don't translate these; each language is named in its own tongue to be readable by those speakers: -->
-		<option value="en">English</option>
-		<option value="fr">Fran&ccedil;ais</option>
-		<option value="es">Espa&ntilde;ol</option>
-	</select>
-</div>
-
+<nav class="top-bar" data-topbar role="navigation">
+	<ul class="title-area">
+		<li class="name"><h1><a href="#">AngularApp!</a></h1></li>
+		<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+	</ul>
+	<section class="top-bar-section">
+		<ul class="right">
+			<li><a href="#" translate>Sign&nbsp;Up</a></li>
+			<li><a href="#" translate>Sign&nbsp;In</a></li>
+			<li class="has-dropdown">
+				<a href="#" translate>More...</a>
+				<ul class="dropdown">
+					<li><a href="#" translate>About</a></li>
+					<li><a href="https://github.com/kellydiversified/angularapp" translate>Download</a></li>
+					<li><a href="#" translate>Documentation</a></li>
+					<li><a href="#" translate>Contact&nbsp;Us</a></li>
+					<li class="has-dropdown">
+						<a href="#" translate>Language...</a>
+						<ul class="dropdown">
+							<!-- Don't translate these; each language is named in
+							its own tongue to be readable by those speakers: -->
+							<li><a href="#" onclick="aaSetLanguage('en');">English</a></li>
+							<li><a href="#" onclick="aaSetLanguage('fr');">Fran&ccedil;ais</a></li>
+							<li><a href="#" onclick="aaSetLanguage('es');">Espa&ntilde;ol</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+</nav>
