@@ -233,7 +233,9 @@ module.exports = function(grunt) {
 		// Compile SCSS into CSS with SASS tool
 		sass: {
 			options: {
-				includePaths: [ 'src/bower_components/foundation/scss' ]
+				includePaths: [
+					'bower_components/foundation/scss'
+				]
 			},
 			build: {
 				files: {
